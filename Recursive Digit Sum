@@ -1,0 +1,17 @@
+#one month prep
+# week 2
+    public static int superDigit(String n, int k) {
+    // Write your code here
+    if(n.length()==1){
+     return Integer.valueOf(n);
+    }
+    
+long temp=0;
+for(int i=0;i<n.length();i++){
+    temp+=(n.charAt(i)-'0');
+}
+    temp=temp*k;
+      return superDigit(String.valueOf(temp),1);
+    }
+
+}
